@@ -29,7 +29,7 @@ class Config(object):
     JOIN_REQUEST_ENABLE = getenv("JOIN_REQUEST_ENABLED", None)
 
     # Messages
-    START_PIC = getenv("START_PIC", "")
+    START_PIC = getenv("START_PIC", "https://envs.sh/z4a.jpg")
     START_MSG = getenv("START_MESSAGE", "👋 Hello {mention},\n\nThis bot helps you store private files in a secure channel and generate special access links for sharing. 🔐📁\n\nOnly admins can upload files and generate links. Just send the file here to get started.")
     FORCE_MSG = getenv("FORCE_SUB_MESSAGE", "👋 Hello {mention},\n\n<b>You need to join our updates channel before using this bot.</b>\n\n📢 Please join the required channel, then try again.")
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
