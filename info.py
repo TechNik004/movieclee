@@ -7,8 +7,8 @@ load_dotenv()
 id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
-    API_ID = int(getenv("API_ID", "0"))
-    API_HASH = getenv("API_HASH", "")
+    API_ID = int(getenv("API_ID", "10671416"))
+    API_HASH = getenv("API_HASH", "d32e7a9253928d78d7888c0b9998939d")
     BOT_TOKEN = getenv("BOT_TOKEN", "")
     BOT_WORKERS = int(getenv("BOT_WORKERS", "4"))
     
@@ -16,16 +16,16 @@ class Config(object):
     WEB_MODE = getenv("WEB_MODE", "False").lower() in ("true", "1", "yes")
     PORT = int(getenv("PORT", "8080"))  # default port for web services
     
-    CHANNEL_ID = int(getenv("CHANNEL_ID", ""))
-    OWNER_ID = int(getenv("OWNER_ID", ""))
+    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1002882008991"))
+    OWNER_ID = int(getenv("OWNER_ID", "6667067260"))
 
     # Database
-    DATABASE_URL = getenv("DATABASE_URL", "")
+    DATABASE_URL = getenv("DATABASE_URL", "mongodb+srv://technik659:8pZAv0q1E4TpzBfW@cluster0.scjdsho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DATABASE_NAME = getenv("DATABASE_NAME", "Cluster0")
 
     # Force subscription
     #FORCE_SUB_CHANNEL = int(getenv("FORCE_SUB_CHANNEL", "0"))   
-    FORCE_SUB_CHANNEL = list(set(int(ch) for ch in getenv("FORCE_SUB_CHANNEL", "").split() if id_pattern.fullmatch(ch)))
+    FORCE_SUB_CHANNEL = list(set(int(ch) for ch in getenv("FORCE_SUB_CHANNEL", "-1002378694223").split() if id_pattern.fullmatch(ch)))
     JOIN_REQUEST_ENABLE = getenv("JOIN_REQUEST_ENABLED", None)
 
     # Messages
@@ -35,7 +35,7 @@ class Config(object):
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
 
     # ✅ Secure ADMINS (only numeric IDs)
-    admins = getenv("ADMINS", "").split()
+    admins = getenv("ADMINS", "6667067260 5225541255").split()
     ADMINS = list(set(
         [int(x) for x in admins if x.isdigit()] + [OWNER_ID]
     ))
@@ -50,10 +50,10 @@ class Config(object):
 
     # Token Verification (Shortlink)
     VERIFY_MODE = getenv("VERIFY_MODE", "True").lower() in ("true", "1", "yes")
-    SHORTLINK_API = getenv("SHORTLINK_API", "")
-    SHORTLINK_URL = getenv("SHORTLINK_URL", "")
-    TOKEN_EXPIRE = int(getenv("TOKEN_EXPIRE", "21600"))  # default: 6 hours
-    TUTORIAL = getenv("TUTORIAL", "https://t.me/shareus_open_tutorial/12")
+    SHORTLINK_API = getenv("SHORTLINK_API", "181feb5a18a1e702e5ccf4caf1cac37ebb607822")
+    SHORTLINK_URL = getenv("SHORTLINK_URL", "linkshortify.com")
+    TOKEN_EXPIRE = int(getenv("TOKEN_EXPIRE", "43200"))  # default: 6 hours
+    TUTORIAL = getenv("TUTORIAL", "https://t.me/+-E1ScRZLkQ05Y2Y1")
 
     BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
     USER_REPLY_TEXT = "❌ I'm a bot — please don't DM me!"
