@@ -13,7 +13,7 @@ class Config(object):
     BOT_WORKERS = int(getenv("BOT_WORKERS", "4"))
     
     # Webhook settings
-    WEB_MODE = getenv("WEB_MODE", "False").lower() in ("true", "1", "yes")
+    WEB_MODE = getenv("WEB_MODE", "True").lower() in ("true", "1", "yes")
     PORT = int(getenv("PORT", "8080"))  # default port for web services
     
     CHANNEL_ID = int(getenv("CHANNEL_ID", "-1002882008991"))
