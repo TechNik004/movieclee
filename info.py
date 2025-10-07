@@ -16,7 +16,7 @@ class Config(object):
     WEB_MODE = getenv("WEB_MODE", "True").lower() in ("true", "1", "yes")
     PORT = int(getenv("PORT", "8080"))  # default port for web services
     
-    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1002882008991"))
+    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1003027241472"))
     OWNER_ID = int(getenv("OWNER_ID", "6667067260"))
 
     # Database
@@ -25,7 +25,7 @@ class Config(object):
 
     # Force subscription
     #FORCE_SUB_CHANNEL = int(getenv("FORCE_SUB_CHANNEL", "0"))   
-    FORCE_SUB_CHANNEL = list(set(int(ch) for ch in getenv("FORCE_SUB_CHANNEL", "-1002378694223").split() if id_pattern.fullmatch(ch)))
+    FORCE_SUB_CHANNEL = list(set(int(ch) for ch in getenv("FORCE_SUB_CHANNEL", "-1002882008991 -1002378694223").split() if id_pattern.fullmatch(ch)))
     JOIN_REQUEST_ENABLE = getenv("JOIN_REQUEST_ENABLED", None)
 
     # Messages
