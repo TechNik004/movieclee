@@ -14,9 +14,9 @@ async def about_callback(client, query: CallbackQuery):
 💬 <b>Language:</b> <a href='https://www.python.org/'>Python 3</a>
 📚 <b>Library:</b> <a href='https://docs.pyrogram.org/'>Pyrogram v{__version__}</a>
 ⚙️ <b>Framework:</b> <a href='https://docs.python.org/3/library/asyncio.html'>asyncio</a>
-🛠️ <b>Source Code:</b> <a href='https://github.com/ps-updates/PS-LinkVault'>GitHub Repo</a>
-📢 <b>Updates:</b> <a href='https://t.me/ps_updates'>𝙏𝙃𝙀 𝙋𝙎 𝘽𝙊𝙏𝙎</a>
-💬 <b>Support:</b> <a href='https://t.me/ps_discuss'>𝙋𝙎 - 𝘿𝙄𝙎𝘾𝙐𝙎𝙎𝙄𝙊𝙉</a>
+🛠️ <b>Source Code:</b> <a href='https://github.com/'>GitHub Repo</a>
+📢 <b>Updates:</b> <a href='https://t.me/'>𝘽𝙊𝙏𝙎</a>
+💬 <b>Support:</b> <a href='https://t.me/'>𝙋𝙎 - 𝘿𝙄𝙎𝘾𝙐𝙎𝙎𝙄𝙊𝙉</a>
 """
     await query.message.edit_text(
         text=text,
